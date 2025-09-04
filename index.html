@@ -4,56 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VANN MARKET</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- HEADER -->
   <header class="top-header">
     <div class="container">
+      <!-- Logo -->
       <div class="logo">
-        <img src="image/logo vannmarket.png" alt="VANN MARKET Logo">
+        <img src="../website-top-up/assets/image/logo vannmarket.png" alt="VANN MARKET Logo">
       </div>
+
+      <!-- Search -->
       <div class="search-container">
         <input type="text" placeholder="Hinted search text">
         <button class="search-btn">🔍</button>
       </div>
+
+      <!-- Language -->
       <div class="language">
-        <img src="image/bendera_indonesia-removebg-preview.png" alt="ID Flag"> 
+        <img src="../website-top-up/assets/image/bendera_indonesia-removebg-preview.png" alt="Bendera Indonesia">
         <span>ID/IDR</span>
       </div>
     </div>
   </header>
 
+  <!-- NAVBAR -->
   <nav class="main-nav">
     <ul>
-      <div class="left-menu">
-        <li><a href="#" class="active">TopUp</a></li>
-        <li><a href="#">Cek Transaksi</a></li>
-      </div>
-      <div class="right-menu">
-        <li><a href="#">Leaderboard</a></li>
-        <li><a href="#">Masuk</a></li>
-        <li><a href="#">Daftar</a></li>
-      </div>
+      <li><a href="#" class="active">TopUp</a></li>
+      <li><a href="#">Cek Transaksi</a></li>
+      <li><a href="#">Leaderboard</a></li>
+      <li class="right"><a href="#">Masuk</a></li>
+      <li class="right"><a href="#">Daftar</a></li>
     </ul>
   </nav>
 
+  <!-- BANNER -->
   <section class="banner">
-    <img src="image/bannervann.png" alt="Banner VANN MARKET">
-    <section class="recommendation">
+    <img src="../website-top-up/assets/image/bannervann.png" alt="Promo VANN MARKET">
+  </section>
+
+  <!-- REKOMENDASI -->
+<section class="recommendation">
   <div class="container">
     <h2 class="title">✨ REKOMENDASI</h2>
     <p class="subtitle">Berikut adalah beberapa produk yang kami rekomendasikan untuk kamu.</p>
 
-    <div class="product-card">
-      <img src="image/logoff.png"Free Fire" class="product-image">
-      <div class="product-info">
-        <h3 class="product-title">FREE FIRE</h3>
-        <p class="product-subtitle">Garena</p>
+    <div class="product-grid">
+      <!-- Produk 1 -->
+      <div class="product-card">
+        <img src="image/freefire.jpg" alt="Free Fire" class="product-image">
+        <div class="product-info">
+          <h3 class="product-title">FREE FIRE</h3>
+          <p class="product-subtitle">Garena</p>
+        </div>
+      </div>
+
+      <!-- Produk 2 -->
+      <div class="product-card">
+        <img src="image/mlbb.jpg" alt="Mobile Legends" class="product-image">
+        <div class="product-info">
+          <h3 class="product-title">MOBILE LEGENDS</h3>
+          <p class="product-subtitle">Moonton</p>
+        </div>
+      </div>
+
+      <!-- Produk 3 -->
+      <div class="product-card">
+        <img src="image/pubg.jpg" alt="PUBG Mobile" class="product-image">
+        <div class="product-info">
+          <h3 class="product-title">PUBG MOBILE</h3>
+          <p class="product-subtitle">Tencent</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-
-
-
+</body>
+</html>
