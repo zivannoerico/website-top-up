@@ -77,42 +77,104 @@ body {
 
 /* NAVBAR */
 .main-nav {
-  background: #333;
+  background: #1f1f1f;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
 }
 
-.main-nav ul {
+.main-nav .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
+}
+
+.main-nav .logo img {
+  max-height: 50px;
+}
+
+.main-nav .search-container {
+  flex: 1;
+  position: relative;
+}
+
+.main-nav .search-container input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 14px;
+}
+
+.main-nav .search-container input::placeholder {
+  color: #aaa;
+}
+
+.main-nav .language {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #2a2a2a;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #fff;
+}
+
+.main-nav .language img {
+  width: 20px;
+  border-radius: 3px;
+}
+
+/* MENU LINKS */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
   list-style: none;
-  gap: 10px;
+  padding: 10px 20px;
+  margin: 0;
 }
 
-.main-nav li a {
-  display: block;
+.nav-links li a {
   color: #fff;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
-  padding: 10px 16px;
-  border-radius: 10px;
-  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.main-nav li a:hover {
-  background: #444;
+.nav-links li a:hover {
+  background: #2a2a2a;
 }
 
-.main-nav li a.active {
-  background: #e60000;
-  color: #fff;
+.nav-links li a.active {
+  color: #e60000;
+  border-bottom: 2px solid #e60000;
 }
 
-.main-nav li.right {
+.nav-links li.right {
   margin-left: auto;
 }
+
+/* Biar Masuk & Daftar punya jarak */
+.nav-links li.right + li.right {
+  margin-left: 20px; /* atur sesuai selera */
+}
+
 
 /* BANNER */
 .banner {
