@@ -408,7 +408,7 @@ body {
   text-align: center;
 }
 
-.load-more button {
+.load-more a {
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
@@ -419,7 +419,7 @@ body {
   transition: background 0.3s ease;
 }
 
-.load-more button:hover {
+.load-more a:hover {
   background: #e60000;
 }
 
@@ -504,6 +504,243 @@ body {
   color: #fff;
 }
 
+/* PAGES 2 */
+.product-highlight {
+  background: linear-gradient(to right, #444, #111);
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.product-highlight .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.product-highlight .product-image img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.product-highlight .product-info {
+  flex: 1;
+}
+
+.product-highlight .product-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-highlight .product-category {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.product-highlight .product-features {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.product-options {
+  padding: 30px 20px;
+  color: #fff;
+}
+
+.product-options .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+
+/* KIRI */
+.left-panel {
+  flex: 2.5;
+  background: #2a0f16;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.panel-header {
+  background: #e60044;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.option-group h3 {
+  margin: 20px 0 10px;
+  font-size: 16px;
+}
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.option-card {
+  background: #333;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option-card:hover {
+  background: #444;
+}
+
+.option-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.option-card span {
+  display: block;
+  margin-top: 8px;
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+/* KANAN */
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.review-box, .help-box, .cart-box {
+  background: #600624;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.review-box h4 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.rating {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.cart-box {
+  background: #333;
+  text-align: center;
+  padding: 30px 15px;
+  border: 1px solid #777;
+}
+
+.order-btn {
+  background: #e60044;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #ff0055;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.left-panel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-box {
+  background: #660d26;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.form-header {
+  background: #e60044;
+  padding: 12px 18px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}
+
+.form-body {
+  padding: 20px;
+  color: #fff;
+}
+
+.form-body input,
+.form-body select {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.form-body small.note {
+  font-size: 12px;
+  color: #ffcccc;
+}
+
+/* Right Panel Boxes */
+.right-panel > div {
+  background: #660d26;
+  border-radius: 10px;
+  padding: 15px;
+  color: #fff;
+}
+
+.rating {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.order-btn {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #e60044;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
@@ -525,6 +762,12 @@ body {
 
   .footer .container {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-options .container {
+    flex-direction: column;
   }
 }
 
