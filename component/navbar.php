@@ -21,4 +21,4 @@
    <li class="right"><a href="page/admin/dashboard.php"><i class="fas fa-user-plus"></i> Daftar</a></li>
 
   </ul>
-</nav>
+</nav> 
