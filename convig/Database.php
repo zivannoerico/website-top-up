@@ -1,19 +1,13 @@
 <?php
-class Database{
-    private $connection;
-    public function getConnection(){
-        $this->connection = null;
-        try{
-            $this->connection = new mysqli("localhost", "root", '', "db_aksara");
+$servername = "localhost";
+$username = "root";
+$password = ""; // kosongkan jika pakai Laragon atau XAMPP default
+$dbname = "vansstore";
 
-            if($this->connection->connect_error){
-                die("Connection failed: " . $this->connection->connect_error);
-            }
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-            $this->connection->set_charset("utf8");
-            return $this->connection;
-        }catch(Exception $e){
-            echo 'Connection failed : '.$e->getMessage();
-        }
-    }
+// Cek koneksi
+if ($conn->connect_error) {
+    die("Koneksi gagal: " . $conn->connect_error);
 }
+?>
