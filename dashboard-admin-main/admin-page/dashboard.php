@@ -14,8 +14,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['a
         $error_msg = "⚠️ Nomor HP harus berupa angka (10–13 digit).";
     } else {
         $password_hash = password_hash($password_raw, PASSWORD_DEFAULT);
-        $stmt = $conn->prepare("INSERT INTO users (username, password, phone_number, status, created_at) VALUES (?, ?, ?, ?, NOW())");
-        $stmt->bind_param("ssss", $username, $password_hash, $phone_number, $status);
+       // ✅ Cari ID terkecil yang belum dipakai
+$result = $conn->query("SELECT user_id FROM users ORDER BY user_id ASC");
+$next_id = 1;
+
+while ($row = $result->fetch_assoc()) {
+    if ($row['user_id'] == $next_id) {
+        $next_id++;
+    } else {
+        break;
+    }
+}
+
+// ✅ Simpan user baru dengan ID manual (mengisi celah kosong)
+$stmt = $conn->prepare("INSERT INTO users (user_id, username, password, phone_number, status, created_at)
+                        VALUES (?, ?, ?, ?, ?, NOW())");
+$stmt->bind_param("issss", $next_id, $username, $password_hash, $phone_number, $status);
+
         if ($stmt->execute()) {
             echo "<script>alert('✅ User berhasil ditambahkan!'); window.location='../dashboard-admin-main';</script>";
             exit;
