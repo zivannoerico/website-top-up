@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard - VansStore</title>
+    <title>Dashboard - VannMarket</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
        body {
@@ -152,9 +152,8 @@ tr:hover {
 <body>
 
 <header>
-    <h1>Dashboard Admin VansStore</h1>
-</header>
-
+    <h1>Dashboard Admin VannMarket</h1>
+</header>S
 <main>
     <!-- FORM TAMBAH USER -->
     <div class="form-container">
