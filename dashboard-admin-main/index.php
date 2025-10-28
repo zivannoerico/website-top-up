@@ -50,19 +50,42 @@
       <img src="./" class="img-fluid logo-lg" alt="logo">
     </div>
     <div class="navbar-content">
-<li class="pc-item">
-<a href="?page=dashboard" class="pc-link">
-<span class="pc-micon"><i class="ti ti-dashboard"></i></span>
-<span class="pc-mtext">Dashboard Admin</span>
-</a>
-</li>
+    <li class="pc-item">
+    <a href="?page=dashboard" class="pc-link">
+    <span class="pc-micon"><i class="ti ti-dashboard"></i></span>
+    <span class="pc-mtext">Dashboard Admin</span>
+    </a>
+    </li>
 
-<li class="pc-item">
-<a href="?page=products_game" class="pc-link">
-<span class="pc-micon"><i class="ti ti-package"></i></span>
-<span class="pc-mtext">products_game</span>
-</a>
-</li>
+    <li class="pc-item">
+    <a href="?page=products_game" class="pc-link">
+    <span class="pc-micon"><i class="ti ti-package"></i></span>
+    <span class="pc-mtext">products_game</span>
+    </a>
+    </li>
+
+    <li class="pc-item">
+      <a href="?page=payment_methods" class="pc-link">
+        <span class="pc-micon"><i class="ti ti-credit-card"></i></span>
+        <span class="pc-mtext">Payment Methods</span>
+      </a>
+    </li>
+
+    <li class="pc-item">
+      <a href="?page=vouchers" class="pc-link">
+        <span class="pc-micon"><i class="ti ti-ticket"></i></span>
+        <span class="pc-mtext">Vouchers</span>
+      </a>
+    </li>
+
+        <li class="pc-item">
+      <a href="?page=topup_transactions" class="pc-link">
+        <span class="pc-micon"><i class="ti ti-wallet"></i></span>
+        <span class="pc-mtext">Top-Up Transactions</span>
+      </a>
+    </li>
+  </ul>
+</div>
 
 
         <li class="pc-item pc-caption">
@@ -332,18 +355,38 @@
   <div class="pc-container">
     <div class="pc-content">
       
-    <?php
+  
+<?php
 $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 
-$file = "./admin-page/$page.php";
-if (file_exists($file)) {
-    include $file;
-} else {
-    include "./admin-page/dashboard.php";
+switch ($page) {
+    case 'dashboard':
+        include './admin-page/dashboard.php';
+        break;
+
+    case 'products_game':
+        include './admin-page/products_game.php';
+        break;
+
+    case 'payment_methods':
+        include './admin-page/payment_methods.php';
+        break;
+
+    case 'vouchers':
+        include './admin-page/vouchers.php';
+        break;
+
+    case 'topup_transactions':
+        include './admin-page/topup_transactions.php';
+        break;
+
+    default:
+        // jika page tidak ditemukan
+        include './admin-page/dashboard.php';
+        break;
 }
-
-
-     ?>   
+?>
+ 
 
 
     </div>
